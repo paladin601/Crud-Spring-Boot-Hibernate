@@ -37,11 +37,11 @@ public class LoanEntity {
 		this.total = totalAux;
 	}
 
-	public Long getUser_Id() {
+	public Long getUser_id() {
 		return user_id;
 	}
 
-	public void setUser_Id(Long user_id_aux) {
+	public void setUser_id(Long user_id_aux) {
 		this.user_id = user_id_aux;
 	}
 

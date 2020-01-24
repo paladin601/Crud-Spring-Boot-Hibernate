@@ -8,16 +8,16 @@ public class UserLoanEntity {
     public UserLoanEntity(UserEntity user) {
         this.id = user.getId();
         this.email = user.getEmail();
-        this.first_name = user.getFirstName();
-        this.last_name = user.getLastName();
+        this.first_name = user.getFirst_name();
+        this.last_name = user.getLast_name();
         this.loan = new ArrayList<LoanEntity>();
     }
 
     public UserLoanEntity(UserEntity user, List<LoanEntity> loans) {
         this.id = user.getId();
         this.email = user.getEmail();
-        this.first_name = user.getFirstName();
-        this.last_name = user.getLastName();
+        this.first_name = user.getFirst_name();
+        this.last_name = user.getLast_name();
         this.loan = loans;
     }
 
@@ -55,19 +55,19 @@ public class UserLoanEntity {
         this.email = email;
     }
 
-    public String getFirstName() {
+    public String getFirst_name() {
         return first_name;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirst_name(String firstName) {
         this.first_name = firstName;
     }
 
-    public String getLastName() {
+    public String getLast_name() {
         return last_name;
     }
 
-    public void setLastName(String lastName) {
+    public void setLast_name(String lastName) {
         this.last_name = lastName;
     }
 

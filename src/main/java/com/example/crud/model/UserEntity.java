@@ -40,19 +40,19 @@ public class UserEntity {
         this.email = email;
     }
 
-	public String getFirstName() {
+	public String getFirst_name() {
 		return first_name;
 	}
 
-	public void setFirstName(String firstName) {
+	public void setFirst_name(String firstName) {
 		this.first_name = firstName;
 	}
 
-	public String getLastName() {
+	public String getLast_name() {
 		return last_name;
 	}
 
-	public void setLastName(String lastName) {
+	public void setLast_name(String lastName) {
 		this.last_name = lastName;
     }
     
