@@ -28,12 +28,12 @@ public class UserController {
     @Autowired
     LoanService serviceLoan;
 
-    @GetMapping
-    public ResponseEntity<List<UserEntity>> getAllUser() {
-        final List<UserEntity> list = service.getAllUsers();
+    // @GetMapping
+    // public ResponseEntity<List<UserEntity>> getAllUser() {
+    //     final List<UserEntity> list = service.getAllUsers();
 
-        return new ResponseEntity<List<UserEntity>>(list, new HttpHeaders(), HttpStatus.OK);
-    }
+    //     return new ResponseEntity<List<UserEntity>>(list, new HttpHeaders(), HttpStatus.OK);
+    // }
 
     @GetMapping("/{id}")
     public ResponseEntity<UserLoanEntity> getEmployeeById(@PathVariable("id") final Long id)
@@ -50,11 +50,11 @@ public class UserController {
         return HttpStatus.OK;
     }
 
-    @GetMapping("/delete/{id}")
-    public HttpStatus deleteUserById(@PathVariable("id") Long id) throws RecordNotFoundException {
-        service.deleteUserById(id);
-        return HttpStatus.OK;
-    }
+    // @GetMapping("/delete/{id}")
+    // public HttpStatus deleteUserById(@PathVariable("id") Long id) throws RecordNotFoundException {
+    //     service.deleteUserById(id);
+    //     return HttpStatus.OK;
+    // }
 
     @DeleteMapping("/delete/{id}")
     public HttpStatus deleteMappingUserById(@PathVariable("id") Long id) throws RecordNotFoundException {
