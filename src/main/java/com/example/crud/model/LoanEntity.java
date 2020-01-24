@@ -29,19 +29,19 @@ public class LoanEntity {
 		this.id = id;
 	}
 
-	public float getFirstName() {
+	public float getTotal() {
 		return total;
 	}
 
-	public void setFirstName(float totalAux) {
+	public void setTotal(float totalAux) {
 		this.total = totalAux;
 	}
 
-	public Long getUserId() {
+	public Long getUser_Id() {
 		return user_id;
 	}
 
-	public void setUserId(Long user_id_aux) {
+	public void setUser_Id(Long user_id_aux) {
 		this.user_id = user_id_aux;
 	}
 
