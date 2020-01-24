@@ -8,27 +8,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="LOAN")
+@Table(name = "LOAN")
 public class LoanEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    @Column(name="total")
-    private float total;
-    
-    @Column(name="user_id")
-    private Long user_id;
-    
-    
-    public Long getId() {
+	@Column(name = "total", unique = false)
+	private float total;
+
+	@Column(name = "user_id", unique = false)
+	private Long user_id;
+
+	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
-    }
+	}
 
 	public float getFirstName() {
 		return total;

@@ -24,7 +24,6 @@ public class UserEntity {
     @Column(name="last_name")
     private String last_name;
     
-    
     public Long getId() {
 		return id;
 	}
@@ -55,11 +54,6 @@ public class UserEntity {
 
 	public void setLastName(String lastName) {
 		this.last_name = lastName;
-	}
-
-    @Override
-    public String toString() {
-        return "User {id=" + id + ", first name=" + first_name + 
-                ", last name=" + last_name + ", email=" + email   + "}";
     }
+    
 }

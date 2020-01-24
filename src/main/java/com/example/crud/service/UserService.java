@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.crud.exception.RecordNotFoundException;
+import com.example.crud.model.LoanEntity;
 //import com.example.crud.exception.RecordNotFoundException;
 import com.example.crud.model.UserEntity;
+import com.example.crud.repository.LoanRepository;
 import com.example.crud.repository.UserRepository;;
  
 @Service
@@ -17,6 +19,8 @@ public class UserService {
      
     @Autowired
     UserRepository repository;
+    @Autowired
+    LoanRepository repositoryLoan;
      
     public List<UserEntity> getAllUsers()
     {
@@ -57,10 +61,11 @@ public class UserService {
          
         if(employee.isPresent())
         {
-            
-
-
-
+            List<LoanEntity> loans= repositoryLoan.findByUser_id(id);
+            for(LoanEntity ent : loans)
+            {
+                repositoryLoan.deleteById(ent.getId());
+            }
             repository.deleteById(id);
         } else {
             throw new RecordNotFoundException("Not found user id ");
